@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Company Name</title>
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:white;
+        }
+
+        header {
+            background-color:skyblue;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+
+        nav {
+            background-color:orange;
+            color: green;
+            padding: 5px;
+            text-align: center;
+        }
+
+        section {
+            padding: 5px;
+        }
+
+        footer {
+            background-color:green;
+            color: yellow;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>PIZZA 24*7 </h1>
+        <p></p>
+        <image src="data:image/jpeg;base64,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"
+" width="200" height="150">
+    </header>
+      
+    <nav>
+        <a href="#home">Home</a> |
+        <a href="#about">About Us</a> |
+        <a href="#MENU">MENU</a> |
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <section id="home">
+        <h2>OUR STORY</h2>
+    <h3>    <p>Everything we do is a celebration of foods - from how we source our pizza's 🍕 burgers 🍔 and other things🍟to serving up new ways for you to enjoy it. Since 2023, we've been committed to bringing you a Italian food experience you won't find anywhere else. That's how we see food differently.</h3>
+<h1>FROM THE KITCHEN </h1>
+
+<h3>If there's a particular kind of Italian food you crave, find the perfect time to come and discover new ways to love it.</h3>
+</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+
+
+</p>
+    </section>
+
+    <section id="MENU">
+        <h2>MENU</h2>
+        <p><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Ordering System</title>
+  <style>
+    /* Basic CSS for layout */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .pizza-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .div-image-label {
+    display: flex;
+    flex-direction: column
+    align-items: center;
+    }
+
+    .pizza-item {
+      text-align: center;
+      margin: 20px;
+    }
+    .pizza-item img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .cart {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    .cart-item {
+      margin-bottom: 10px;
+    }
+    .btn{
+      background-color: #04AA6D;
+      text-align: center;
+      font-size: 16px;
+      color: white;
+    }
+    input[type="submit"] {
+      background-color: #FF6347;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #FF4500;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <h1>Pizza Ordering System</h1>
+
+  <div class="pizza-container">
+    <div class="pizza-item">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/classic-cheese-pizza-recipe-2-64429a0cb408b.jpg?crop=0.6666666666666667xw:1xh;center,top&resize=1200:*" alt="Classic Cheeze Pizza">
+      <p> <b>Classic Cheeze Pizza </b></p>
+      <p>$10</p>
+      <form class="order-form">
+        <label for="toppings1">Toppings:</label>
+        <input type="text" id="toppings1" name="toppings" placeholder="Enter toppings (comma-separated)">
+        <input type="hidden" name="pizza" value="Pizza 1">
+        <input type="hidden" name="price" value="10">
+        <input type="submit" value="Add to Cart">
+      </form>
+    </div>
+
+    <div class="pizza-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRow5m2Q9wT6_KeTOgTtef4eV821zEQOoklwA&usqp=CAU" alt="Paneer Pizza">
+      <p><b> Paneer Pizza </b></p>
+      <p>$12</p>
+      <form class="order-form">
+        <label for="toppings2">Toppings:</label>
+        <input type="text" id="toppings2" name="toppings" placeholder="Enter toppings (comma-separated)">
+        <input type="hidden" name="pizza" value="Pizza 2">
+        <input type="hidden" name="price" value="12">
+        <input type="submit" value="Add to Cart">
+      </form>
+    </div>
+
+    <div class="pizza-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPnnmKL386PYhtnbDnz_bCeOkAaijL2dGnIiCTNUQw13mQkLdzXgwY32J1bRjuwdSz1zQ&usqp=CAU" alt="Extra Toppings Pizza">
+      <p><b>Extra Toppings Pizza</b></p>
+      <p>$13</p>
+      <form class="order-form">
+        <label for="toppings3">Toppings:</label>
+        <input type="text" id="toppings3" name="toppings" placeholder="Enter toppings (comma-separated)">
+        <input type="hidden" name="pizza" value="Pizza 3">
+        <input type="hidden" name="price" value="13">
+        <input type="submit" value="Add to Cart">
+      </form>
+    </div>
+
+    <div class="pizza-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDNjxjj3a9HY593h2qlkU2xU6T6d_0YAi5hA&usqp=CAU" alt="Supreme Saucy Pizza">
+      <p><b>Supreme Saucy Pizza</b></p>
+      <p>$14</p>
+      <form class="order-form">
+        <label for="toppings4">Toppings:</label>
+        <input type="text" id="toppings4" name="toppings" placeholder="Enter toppings (comma-separated)">
+        <input type="hidden" name="pizza" value="Pizza 4">
+        <input type="hidden" name="price" value="14">
+        <input type="submit" value="Add to Cart">
+      </form>
+    </div>
+
+    <!-- Add more pizza items as needed -->
+  </div>
+
+  <div class="cart">
+    <h2>Cart</h2>
+    <div class="cart-items"></div>
+    <p>Total: $<span id="total">0</span></p>
+  </div>
+
+ <div class="checkout">
+  <h2>Checkout</h2>
+  <p>Total: $<span id="checkoutTotal">0</span></p>
+  <button class="btn" id="checkoutBtn">Proceed to Payment</button>
+</div>
+
+<div id="paymentModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Payment</h2>
+    <p>Payment Total: $<span id="paymentTotal">0</span></p>
+    <button class="btn" id="confirmPayment">Confirm Payment</button>
+  </div>
+</div>
+
+  <script>
+    const cartItems = document.querySelector('.cart-items');
+    const totalElement = document.getElementById('total');
+    const checkoutTotalElement = document.getElementById('checkoutTotal');
+    const checkoutBtn = document.getElementById('checkoutBtn');
+    const paymentModal = document.getElementById('paymentModal');
+    const closeBtn = document.querySelector('.close');
+    const confirmPaymentBtn = document.getElementById('confirmPayment');
+    const paymentTotalElement = document.getElementById('paymentTotal');
+
+    // Function to handle form submission (Add to Cart)
+    document.querySelectorAll('.order-form').forEach(form => {
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevents default form submission
+        const toppings = this.querySelector('input[name="toppings"]').value;
+        const pizza = this.querySelector('input[name="pizza"]').value;
+        const price = parseFloat(this.querySelector('input[name="price"]').value);
+
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+        cartItem.innerHTML = `
+          <p><strong>${pizza}</strong></p>
+          <p>Toppings: ${toppings}</p>
+          <p>Price: $${price}</p>
+        `;
+        cartItems.appendChild(cartItem);
+
+        // Calculate total price
+        let totalPrice = parseFloat(totalElement.textContent);
+        totalPrice += price;
+        totalElement.textContent = totalPrice.toFixed(2);
+
+        // Clear the form
+        //this.reset();
+      });
+    });
+
+    // Existing JavaScript code remains the same
+
+  // Checkout functionality
+  
+
+  checkoutBtn.addEventListener('click', () => {
+    const total = parseFloat(totalElement.textContent);
+    checkoutTotalElement.textContent = total.toFixed(2);
+    paymentTotalElement.textContent = total.toFixed(2);
+    paymentModal.style.display = 'block';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    paymentModal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target === paymentModal) {
+      paymentModal.style.display = 'none';
+    }
+  });
+
+  confirmPaymentBtn.addEventListener('click', () => {
+    // const total = parseFloat(totalElement.textContent);
+    // paymentTotalElement.textContent = total.toFixed(2);
+    alert('Payment confirmed! Thank you for your order.');
+    // Reset cart after payment confirmation
+    cartItems.innerHTML = '';
+    totalElement.textContent = '0';
+    checkoutTotalElement.textContent = '0';
+    paymentModal.style.display = 'none';
+    this.reset();
+  });
+  </script>
+
+</body>
+</html>
+
+  
+</p>
+    </section> 
+     <section id=" Products">
+         <h2>Products</h2>
+          <h3><B>order</b></h3>
+          <p><head>
+    <title>Place your Order</title>
+  </head>
+  <body>
+    <form>
+    <section class="delivery-address">
+      <label for=country>Country</label>
+      <select name="location" id="country">
+        <option value="">India</options>
+        <option value="Nepal">Nepal</option>
+      </select> <br>
+      
+      <label for=address-type>Address Type</label>
+      <select name="location" id="address-type">
+        <option value="residential">Residential</option>
+        <option value="business">Business</option>
+        <option value="university">University</option>
+        <option value="military">Military</option>
+      </select> <br>
+      
+      <label for=street-address>Street Address</label>
+      <input type="text" name="location" id="street-address" placeholder="1234 S Pacific Way"> <br>
+      
+      <label for=apt>Apt / Ste / Floor</label>
+      <select name="location" id="apt">
+        <option value="apt">Apt</option>
+        <option value="ste">Suite</option>
+        <option value="floor">Floor</option>
+      </select>
+      <input type="text" name="location" id="apt"><br>
+      
+      <label for=zip-code>Zip Code</label>
+      <input type="text" name="location" id="zip-code"> <br>
+    </section>
+    
+    <hr>
+    
+    <section class="create-a-pizza">
+      <label for="crust">Start by selecting your favorite crust.</label>
+      <select name="crust" id=crust>
+        <option value="original-crust">Original Crust</option>
+        <option value="epic-stuffed-crust">Epic Stuffed Crust</option>
+        <option value="thin-crust">Thin Crust</option>
+        <option value="gluten-free">Gluten Free Crust</option>
+      </select>
+      
+    </section>
+    <hr>
+    
+    <section class="base">
+      <h2>Create a Base</h2>
+      <span>Size</span> <br>
+      <input type="radio" name="size" id="small-size" value="small-size">
+      <label for="small-size">Small</label><br>
+      <input type="radio" name="size" id="medium-size" value="medium-size">
+      <label for="medium-size">Medium</label><br>
+      <input type="radio" name="size" id="large-size" value="large-size">
+      <label for="large-size">Large</label><br>
+      <input type="radio" name="size" id="extra-large-size" value="extra-large-size">
+      <label for="extra-large-size">Extra Large</label><br> 
+      <br>
+    </section>
+      
+    </section class="crust-flavor">
+      <span>Crust Flavor</span> <br>
+      <input type="radio" name="crust-flavor" id="flavor-none" value="flavor-none">
+      <label for="flavor-none">None</label><br>
+      <input type="radio" name="crust-flavor" id="flavor-garlic" value="flavor-garlic">
+      <label for="flavor-garlic">Garlic Parmesean Cheese</label><br>
+      <br>
+      </section>
+      
+      <span>Sauce</span> <br>
+      <input type="radio" name="sauce" id="none" value="none">
+      <label for="none">None</label><br>
+      <input type="radio" name="sauce" id="BBQ" value="BBQ">
+      <label for="BBQ">BBQ</label><br>
+      <input type="radio" name="sauce" id="ranch" value="ranch">
+      <label for="ranch">Ranch</label><br>
+      <input type="radio" name="sauce" id="original" value="original">
+      <label for="original">Original</label><br> 
+      <input type="radio" name="sauce" id="buffalo" value="buffalo">
+      <label for="buffalo">Buffalo</label><br> 
+      <input type="radio" name="sauce" id="alfredo" value="alfredo">
+      <label for="alfredo">Alfredo</label><br> 
+      <br>
+      
+      <span>Cut</span> <br>
+      <input type="radio" name="cut" id="normal-cut" value="normal-cut">
+      <label for="normal-cut">Norma Cut</label><br>
+      <input type="radio" name="cut" id="square-cut" value="square-cut">
+      <label for="square-cut">Square Cut</label><br>
+      <input type="radio" name="cut" id="clean-cut" value="clean-cut">
+      <label for="clean-cut">Clean Cut</label><br>
+      <input type="radio" name="cut" id="no-cut" value="no-cut">
+      <label for="no-cut">No cut</label><br> 
+      <br>
+      
+      <span>Bake</span> <br>
+      <input type="radio" name="bake" id="normal-bake" value="normal-bake">
+      <label for="bake">Normal Bake</label><br>
+      <input type="radio" name="bake" id="well-done" value="well-done">
+      <label for="normal-bake">Well Done</label><br>
+      <br>
+    </section>
+    <hr>
+    
+    <section class="cheese">
+      <h2>Cheese</h2>
+      <span>How much cheese</span> <br>
+      <input type="radio" name="cheese" id="normal-cheese" value="normal-cheese">
+      <label for="normal-cheese">Normal Cheese</label><br>
+      <input type="radio" name="cheese" id="light-cheese" value="light-cheese">
+      <label for="light-cheese">Light Cheese</label><br>
+      <input type="radio" name="cheese" id="no-cheese" value="no-cheese">
+      <label for="lno-cheese">No Cheese</label><br>
+      <br>
+      
+      <span>Additional Cheese Topping</span> <br>
+      <input type="checkbox" name="cheese" id="parmesean" value="parmesean">
+      <label for="parmesean">Parmesean Romano</label><br>
+      <input type="checkbox" name="cheese" id="3-cheese-blend" value="3-cheese-blend">
+      <label for="3-cheese-blend">3-Cheese Blend</label><br>
+      <br>
+    </section> <hr>
+    
+    <section class="meats">
+      <h2>Meats</h2>
+      <span>Meats</span> <br>
+      <input type="checkbox" name="meats" id="meatball" value="meatball">
+      <label for="meatball">Meatball</label><br>
+      <input type="checkbox" name="meats" id="spicy-italian-sausage" value="spicy-italian sausage">
+      <label for="spicy-italian sausage">Spicy Italian Sausage</label><br>
+      <input type="checkbox" name="meats" id="sausage" value="sausage">
+      <label for="sausage">Sausage</label><br>
+      <input type="checkbox" name="meats" id="salami" value="salami">
+      <label for="salami">Salami</label><br>
+      <input type="checkbox" name="meats" id="beef" value="beef">
+      <label for="beef">Beef</label><br>
+      <input type="checkbox" name="meats" id="grilled-chicken" value="grilled-chicken">
+      <label for="grilled-chicken">Grilled Chicken</label><br>
+      <input type="checkbox" name="meats" id="canadian-bacon" value="canadian-bacon">
+      <label for="canadian-bacon">Canadian Bacon</label><br>
+      <input type="checkbox" name="meats" id="philly-steak" value="philly-steak">
+      <label for="philly-steak">Philly Steak</label><br>
+      <input type="checkbox" name="meats" id="pepperoni" value="pepperoni">
+      <label for="pepperoni">Pepperoni</label><br>
+      <input type="checkbox" name="meats" id="anchovies" value="anchovies">
+      <label for="anchovies">Anchovies</label><br>
+      <input type="checkbox" name="meats" id="bacon" value="bacon">
+      <label for="bacon">Bacon</label><br>
+    </section> <hr>
+    
+    <section class="veggeis">
+      <h2>Veggies</h2>
+      <span>Veggies</span><br>
+      <input type="checkbox" name="veggies" id="roma-tomatoes" value="roma-tomatoes">
+      <label for="roma-tomatoes">Roma Tomatoes</label><br>
+      <input type="checkbox" name="veggies" id="mushrooms" value="mushrooms">
+      <label for="mushrooms">Mushrooms</label><br>
+      <input type="checkbox" name="veggies" id="pineapple" value="pineapple">
+      <label for="pineapple">Pineapple</label><br>
+      <input type="checkbox" name="veggies" id="green-chiles" value="green-chiles">
+      <label for="green-chiles">Green Chiles</label><br>
+      <input type="checkbox" name="veggies" id="jalepeno-peppers" value="jalepeno-peppers">
+      <label for="jalepeno-peppers">Jalepeno Peppers</label><br>
+      <input type="checkbox" name="veggies" id="onions" value="onions">
+      <label for="onions">Onions</label><br>
+      <input type="checkbox" name="veggies" id="green-peppers" value="green-peppers">
+      <label for="green-peppers">Green Peppers</label><br>
+      <input type="checkbox" name="veggies" id="banana-peppers" value="banana-peppers">
+      <label for="banana-peppers">Banana Peppers</label><br>
+      <input type="checkbox" name="veggies" id="fresh-spinach" value="fresh-spinach">
+      <label for="fresh-spinach">Fresh Spinach</label><br>
+      <input type="checkbox" name="veggies" id="black-olives" value="black-olives">
+      <label for="black-olives">Black Olives</label><br>
+    </section> <hr>
+    
+    <input type="submit" value="send">
+    </form>
+  </body>
+	
+</p>
+<head><h1> Payment</h1></head>
+<img src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg"height="150"depth="100"
+<body><h1> SCAN ME FOR PAYMENT </h1>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Contact Us:<br>
+mail:pizza24*7@gmail.com<br>
+phone number: 8811122...<br>                    
+ Dedicated helpline (Toll Free: 1800 3252) for any kind of complain and for booking an order.
+
+ </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+</body>
